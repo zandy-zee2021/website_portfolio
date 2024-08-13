@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8d7dd;
+}
+
+.body-content .picture-frame {
+    width: 300px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    border: 5px solid #FFC1CC; /* Black border to represent the frame */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Light grey background */
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.body-content .picture-frame span {
+    font-size: 16px;
+    color: #888; /* Grey color for the placeholder text */
+}
+
+.body-content .headline{
+    font-size: 50px;
+    font-family: 'Alex Brush', cursive;
+    color: #f7a1b1;
+    margin-left: 550px;
+    margin-top: -480px;
+    
+}
+
+.body-content .headline h2{
+    font-family: 'Castellar', serif;
+    font-size: 50px;
+    margin-top: -80px;
+}
+
+
+.body-content .home {
+    display: flex;
+    align-items: center;
+}
+
+.body-content button{
+    margin-top: 120px;
+    margin-left: 700px;
+    margin-top: -20px;
+    background-color: #f19cab; /* Pink background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add padding to make it look like a button */
+    border-radius: 50px; /* Creates the oval shape */
+    font-size: 20px; /* Adjust font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-align: center; /* Center text */
+    
+}
