@@ -3,6 +3,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8d7dd;
 }
+.body-content #home img{
+    display: flex;
+    gap: 15px
+}
 
 .body-content .picture-frame {
     width: 300px; /* Adjust the width as needed */
@@ -14,6 +18,7 @@ body {
     background-color: #f0f0f0; /* Light grey background */
     margin-top: 30px;
     margin-left: 100px;
+    /* border-bottom: 2px solid black; */
 }
 
 .body-content .picture-frame span {
@@ -37,7 +42,7 @@ body {
 }
 
 
-.body-content .home {
+.body-content #home {
     display: flex;
     align-items: center;
 }
@@ -55,4 +60,62 @@ body {
     cursor: pointer; /* Change cursor to pointer on hover */
     text-align: center; /* Center text */
     
+}
+
+/* navbar */
+.body-content .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-direction: row-reverse; /* This moves the navbar to the opposite side */
+    position: absolute; /* Allows you to move the navbar */
+    top: 0; /* Move it to the top of the page */
+    right: 0; /* Align it to the right side */
+    left: 0; /* Ensure it stretches across the page */
+    margin-top: 20px; /* Fine-tune this value to move it up further if needed */
+}
+
+
+
+.body-content .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Space between each nav link */
+}
+
+.body-content .nav-links a {
+    text-decoration: none;
+    color:  #f07b90;
+    font-size: 25px;
+    display: flex;
+}
+
+.body-content .nav-links a.active {
+    color: white;
+}
+
+.body-content .page-section {
+    display: none;
+    transition: transform 0.5s ease-in-out; /* Add transition for smooth effect */
+}
+
+.body-content .page-section.active {
+    display: block;
+    transform: translateX(0);
+}
+
+/* about page */
+.body-content .about-me-picture-frame {
+    width: 300px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    border: 5px solid #FFC1CC; /* Black border to represent the frame */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Light grey background */
+    margin-top: 30px;
+    margin-left: 100px;
+    flex-direction: row-reverse; /* This moves the navbar to the opposite side */
+
 }
