@@ -451,23 +451,26 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="https://github.com/zandy-zee2021/to-do-list">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+            <li class="project-item active" data-filter-item data-category="web design">
+              <a href="https://github.com/zandy-zee2021/to-do-list" onclick="event.preventDefault();">
+                <div class="slideshow-container" id="slideshow1">
+                  <div class="project-img slideshow-slide">
+                    <img src="./assets/images/to-do-list.png" alt="to_do_list" loading="lazy">
                   </div>
-
-                  <img src="./assets/images/to-do-list.png" alt="finance" loading="lazy">
-                </figure>
-
+                  <div class="project-img slideshow-slide">
+                    <img src="./assets/images/signup_to_do_list.png" alt="signup_page" loading="lazy">
+                  </div>
+                  <div class="project-img slideshow-slide">
+                    <img src="./assets/images/home_to_do_list.png" alt="home_page" loading="lazy">
+                  </div>
+                  <a class="prev" onclick="plusSlides(-1, 'slideshow1', event)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1, 'slideshow1', event)">&#10095;</a>
+                </div>
                 <h3 class="project-title">To-do List</h3>
-
-                <p class="project-category">Web development</p>
-
+                <p class="project-category">Web design</p>
               </a>
             </li>
+            
 
             <li class="project-item  active" data-filter-item data-category="applications">
               <a href="https://github.com/zandy-zee2021/password-generator">
@@ -697,6 +700,55 @@
 
       </article>
 
+
+      <!-- script for the image slider -->
+      <script>
+        function plusSlides(n, slideshowId, event) {
+        event.stopPropagation(); // Prevent the click event from propagating to the parent <a> tag
+        showSlides(slideshowId, n);
+      }
+
+      function showSlides(slideshowId, n) {
+        let slideshow = document.getElementById(slideshowId);
+        let slides = slideshow.getElementsByClassName("slideshow-slide");
+
+        // Get the current slide index or default to 1
+        let slideIndex = parseInt(slideshow.getAttribute("data-slide-index") || 1);
+
+        // Update the slide index based on the direction (n)
+        slideIndex += n;
+
+        // Handle wrapping around (looping) the slides
+        if (slideIndex > slides.length) {
+          slideIndex = 1; // Go to the first slide
+        }
+        if (slideIndex < 1) {
+          slideIndex = slides.length; // Go to the last slide
+        }
+
+        // Hide all slides
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        // Show the current slide
+        slides[slideIndex - 1].style.display = "block";
+
+        // Update the current slide index in the slideshow's attribute
+        slideshow.setAttribute("data-slide-index", slideIndex);
+      }
+
+      // Initialize all slideshows
+      document.querySelectorAll(".slideshow-container").forEach((slideshow) => {
+        // Set the initial slide index to 1 for all slideshows
+        slideshow.setAttribute("data-slide-index", 1);
+
+        // Display the first slide
+        showSlides(slideshow.id, 0); // Use 0 to prevent changing the index on initialization
+      });
+
+      </script>
+      <!-- end of script -->
 
       <!--
         - #CONTACT
